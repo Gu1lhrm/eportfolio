@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Project Title Two · ePortfolio</title>
+  <style>
+    :root{--bg:#fbfafc;--card:#fff;--text:#1b1b1f;--muted:#5d5a66;--border:#e6e3ee;--accent:#5b34d6;--accent2:#3b23a3;--ring:rgba(91,52,214,.28);--r:14px;--s2:1rem;--s3:1.5rem;--mw:900px;--sh:0 10px 30px rgba(10,10,20,.06);color-scheme:light}
+    *{box-sizing:border-box} body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
+    a{color:inherit} .wrap{max-width:var(--mw);margin:0 auto;padding:0 var(--s2)}
+    header{position:sticky;top:0;z-index:10;background:rgba(251,250,252,.92);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--border)}
+    .bar{display:flex;gap:var(--s2);align-items:center;justify-content:space-between;min-height:64px}
+    .brand{font-weight:700;letter-spacing:.2px;text-decoration:none}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:.25rem;flex-wrap:wrap;justify-content:flex-end}
+    nav a{display:inline-block;text-decoration:none;padding:.45rem .7rem;border-radius:999px;color:var(--muted)}
+    nav a:hover{background:#f1eefb;color:var(--text)}
+    main{padding:var(--s3) 0}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--sh)}
+    .pad{padding:var(--s3)}
+    .ph{position:relative;display:grid;place-items:center;color:#6a63a0;border:1px dashed #bfb6e6;border-radius:var(--r);background:linear-gradient(135deg,#f3efff,#fff);overflow:hidden}
+    .ph::after{content:attr(data-label);position:absolute;inset:0;display:grid;place-items:center;font-weight:600;letter-spacing:.2px}
+    .ph img{width:100%;height:100%;object-fit:cover;display:block}
+    h1{margin:0 0 .25rem;font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.2}
+    h2{margin:0 0 .6rem;font-size:1.1rem}
+    .muted{color:var(--muted);margin:.25rem 0 0}
+    .grid{display:grid;gap:var(--s2)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:.55rem .85rem;border-radius:10px;border:1px solid rgba(91,52,214,.35);background:rgba(91,52,214,.08);color:var(--accent2);text-decoration:none;font-weight:600}
+    .btn:hover{background:rgba(91,52,214,.12)}
+    footer{border-top:1px solid var(--border);padding:var(--s3) 0;color:var(--muted)}
+    :focus-visible{outline:3px solid var(--ring);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap bar">
+      <a class="brand" href="index.html" aria-label="Back to ePortfolio home">Your Name</a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#reflections">Reflections</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="card pad grid">
+      <header>
+        <h1>Project Title Two</h1>
+        <p class="muted">One-sentence summary of the project’s goal and the primary outcome.</p>
+      </header>
+
+      <div class="ph" style="height:240px" data-label="Project Banner / Screenshot">
+        <img alt="Project screenshot placeholder" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" />
+      </div>
+
+      <section aria-labelledby="overview">
+        <h2 id="overview">Overview</h2>
+        <p class="muted">What problem did you solve? What was the context (course, assignment, constraints)? What does the artifact demonstrate?</p>
+      </section>
+
+      <section aria-labelledby="stack">
+        <h2 id="stack">Tools & Technologies</h2>
+        <p class="muted">List key tools (e.g., HTML/CSS/JS, Python, SQL, Git) and why you chose them.</p>
+      </section>
+
+      <section aria-labelledby="artifact">
+        <h2 id="artifact">Artifact Link</h2>
+        <p class="muted">Replace the link below with your hosted artifact (GitHub, PDF, demo, etc.).</p>
+        <p><a class="btn" href="#" aria-label="Open project artifact (replace #)">Open Artifact</a></p>
+      </section>
+
+      <section aria-labelledby="reflection">
+        <h2 id="reflection">Reflection</h2>
+        <p class="muted">What did you learn? What trade-offs did you make? What would you improve next iteration?</p>
+      </section>
+
+      <p><a class="btn" href="index.html#projects" aria-label="Back to projects list">Back to Projects</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <small>© <span id="y">2026</span> Your Name · Contact: your.email@example.com</small>
+    </div>
+  </footer>
+  <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+</body>
+</html>
