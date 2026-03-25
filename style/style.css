@@ -1,0 +1,168 @@
+/* ==========================================================================
+   1. Variáveis de Tema (Dark Mode Ativado)
+   ========================================================================== */
+:root {
+  --bg: #121016;            /* Fundo principal super escuro */
+  --card: #1c1a24;          /* Fundo dos cartões normais (About e Reflections) */
+  --text: #fbfafc;          /* Texto principal claro para excelente leitura */
+  --muted: #a09eb0;         /* Texto secundário em cinza claro */
+  --border: #323040;        /* Linhas de separação discretas */
+  --accent: #7b5bea;        /* Roxo mais claro e vibrante para destaque */
+  --accent2: #5b34d6;       /* Roxo profundo */
+  --ring: rgba(123, 91, 234, 0.4); /* Anel de foco mais visível no escuro */
+  --sh: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombras densas para profundidade */
+  color-scheme: dark;       /* Renderiza barras de rolagem nativas no modo escuro */
+
+  /* Medidas de Layout e Espaçamento */
+  --r: 14px;                /* Arredondamento padrão */
+  --s1: 0.75rem;            /* Espaçamento pequeno */
+  --s2: 1rem;               /* Espaçamento médio */
+  --s3: 1.5rem;             /* Espaçamento grande */
+  --s4: 2.25rem;            /* Espaçamento extra grande */
+  --mw: 1100px;             /* Largura máxima do site */
+}
+
+/* ==========================================================================
+   2. Reset Global e Elementos Base
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+}
+
+/* ==========================================================================
+   3. Estrutura Principal de Layout
+   ========================================================================== */
+.wrap {
+  max-width: var(--mw);
+  margin: 0 auto;
+  padding: 0 var(--s2);
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--s3);
+  align-items: start;
+}
+
+.section {
+  padding: var(--s3) 0;
+}
+
+.pad {
+  padding: var(--s3);
+}
+
+main section {
+  scroll-margin-top: 84px;
+}
+
+/* ==========================================================================
+   4. Cabeçalho e Navegação
+   ========================================================================== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(18, 16, 22, 0.85); 
+  backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid var(--border);
+    transition: transform 0.3s ease-in-out; 
+}
+
+/* NOVA CLASSE: Joga o menu 100% do tamanho dele para cima, escondendo-o da tela */
+.esconder-menu {
+  transform: translateY(-100%);
+}
+
+.bar {
+  display: flex;
+  gap: var(--s2);
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem; /* Aumentei um pouco o espaço para a animação respirar */
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* --- NOVA ANIMAÇÃO DO MENU --- */
+nav a {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid var(--accent); /* Usa o roxo do seu tema */
+  border-bottom: 2px solid var(--accent); /* Usa o roxo do seu tema */
+  transform: scaleY(2);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 4px); /* Encaixa perfeitamente dentro das bordas */
+  background-color: var(--accent); /* Fundo roxo */
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+nav a:hover {
+  color: #fff; /* O texto fica branco puro ao passar o mouse */
+}
+
+nav a:hover::before,
+nav a:hover::after {
+  transform: scaleY(1); /* Traz a escala de volta ao normal */
+  opacity: 1; /* Faz o elemento aparecer */
+}
+

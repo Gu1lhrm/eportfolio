@@ -4,67 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Academic ePortfolio</title>
-  <style>
-    :root{
-      --bg:#fbfafc;--card:#fff;--text:#1b1b1f;--muted:#5d5a66;
-      --border:#e6e3ee;--accent:#5b34d6;--accent2:#3b23a3;--ring:rgba(91,52,214,.28);
-      --r:14px;--s1:.75rem;--s2:1rem;--s3:1.5rem;--s4:2.25rem;--mw:1100px;
-      --sh:0 10px 30px rgba(10,10,20,.06);
-      color-scheme: light;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
-    a{color:inherit}
-    .wrap{max-width:var(--mw);margin:0 auto;padding:0 var(--s2)}
-    header{position:sticky;top:0;z-index:10;background:rgba(251,250,252,.92);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--border)}
-    .bar{display:flex;gap:var(--s2);align-items:center;justify-content:space-between;min-height:64px}
-    .brand{font-weight:700;letter-spacing:.2px;text-decoration:none}
-    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:.25rem;flex-wrap:wrap;justify-content:flex-end}
-    nav a{display:inline-block;text-decoration:none;padding:.45rem .7rem;border-radius:999px;color:var(--muted)}
-    nav a:hover{background:#f1eefb;color:var(--text)}
-    main section{scroll-margin-top:84px}
-    .hero{padding:var(--s4) 0 var(--s3)}
-    .hero h1{margin:0 0 .4rem;font-size:clamp(1.9rem,3.3vw,3rem);line-height:1.15}
-    .hero p{margin:.25rem 0 1.2rem;color:var(--muted);max-width:70ch}
-    .ph{position:relative;display:grid;place-items:center;color:#6a63a0}
-    .ph::after{content:attr(data-label);position:absolute;inset:0;display:grid;place-items:center;font-weight:600;letter-spacing:.2px}
-    .ph img{width:100%;height:100%;object-fit:cover;display:block}
-    .banner{border:1px dashed #bfb6e6;background:linear-gradient(135deg,#f3efff,#ffffff);border-radius:var(--r);height:clamp(180px,28vw,320px);overflow:hidden}
-    .grid2{display:grid;grid-template-columns:1fr 1.4fr;gap:var(--s3);align-items:start}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--sh)}
-    .projects .card{transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;will-change:transform}
-    .projects .card:hover,.projects .card:focus-within{transform:translateY(-6px) scale(1.01);box-shadow:0 18px 46px rgba(10,10,20,.12);border-color:rgba(91,52,214,.35)}
-    .pad{padding:var(--s3)}
-    .avatar{aspect-ratio:1/1;min-height:220px;border:1px dashed #bfb6e6;border-radius:var(--r);background:linear-gradient(180deg,#f6f3ff,#fff);overflow:hidden}
-    h2{margin:0 0 .75rem;font-size:1.25rem;letter-spacing:.2px}
-    .lede{color:var(--muted);margin:0}
-    .section{padding:var(--s3) 0}
-    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--s2)}
-    .pimg{height:140px;border-bottom:1px solid var(--border);background:linear-gradient(135deg,#f3efff,#fff);overflow:hidden}
-    .pbody{padding:var(--s2)}
-    .ptitle{margin:0 0 .25rem;font-weight:650}
-    .pdesc{margin:0 0 .85rem;color:var(--muted)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.55rem .85rem;border-radius:10px;border:1px solid rgba(91,52,214,.35);background:rgba(91,52,214,.08);color:var(--accent2);text-decoration:none;font-weight:600}
-    .btn:hover{background:rgba(91,52,214,.12)}
-    .textBox{max-width:80ch}
-    footer{border-top:1px solid var(--border);padding:var(--s3) 0;color:var(--muted)}
-    .mt{margin-top:.75rem}
-    .mt2{margin:.9rem 0 0}
-    :focus-visible{outline:3px solid var(--ring);outline-offset:3px}
-    @media (max-width:720px){
-      .bar{align-items:flex-start;padding:10px 0}
-      nav ul{justify-content:flex-start}
-      .grid2{grid-template-columns:1fr}
-      .pad{padding:var(--s2)}
-      .hero{padding:var(--s3) 0 var(--s2)}
-    }
-    @media (prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}
-      .projects .card{transition:none}
-      .projects .card:hover,.projects .card:focus-within{transform:none}
-    }
-  </style>
+  <link rel="stylesheet" href="../style/index.css">
+  <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
   <header>
@@ -108,46 +49,34 @@
     <section id="projects" class="section" aria-labelledby="projects-title">
       <h2 id="projects-title">Technical Projects</h2>
       <div class="projects" role="list">
-        <article class="card" role="listitem">
-          <div class="pimg ph" data-label="Project Image">
-            <img alt="Project 1 image placeholder" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" />
-          </div>
+        
+        <article class="card neon-card" role="listitem">
+          <span></span>
           <div class="pbody">
             <h3 class="ptitle">Project Title One</h3>
             <p class="pdesc">Brief description of the project, your role, and the core outcome or lesson learned.</p>
             <a class="btn" href="project-1.html" aria-label="View details for Project Title One">View Artifact</a>
           </div>
         </article>
-        <article class="card" role="listitem">
-          <div class="pimg ph" data-label="Project Image">
-            <img alt="Project 2 image placeholder" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" />
-          </div>
+
+        <article class="card neon-card" role="listitem">
+          <span></span>
           <div class="pbody">
             <h3 class="ptitle">Project Title Two</h3>
             <p class="pdesc">Brief description of the project, your role, and the core outcome or lesson learned.</p>
             <a class="btn" href="project-2.html" aria-label="View details for Project Title Two">View Artifact</a>
           </div>
         </article>
-        <article class="card" role="listitem">
-          <div class="pimg ph" data-label="Project Image">
-            <img alt="Project 3 image placeholder" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" />
-          </div>
+
+        <article class="card neon-card" role="listitem">
+          <span></span>
           <div class="pbody">
             <h3 class="ptitle">Project Title Three</h3>
             <p class="pdesc">Brief description of the project, your role, and the core outcome or lesson learned.</p>
             <a class="btn" href="project-3.html" aria-label="View details for Project Title Three">View Artifact</a>
           </div>
         </article>
-        <article class="card" role="listitem">
-          <div class="pimg ph" data-label="Project Image">
-            <img alt="Project 4 image placeholder" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" />
-          </div>
-          <div class="pbody">
-            <h3 class="ptitle">Project Title Four</h3>
-            <p class="pdesc">Brief description of the project, your role, and the core outcome or lesson learned.</p>
-            <a class="btn" href="project-4.html" aria-label="View details for Project Title Four">View Artifact</a>
-          </div>
-        </article>
+
       </div>
     </section>
 
@@ -168,6 +97,30 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    // Código para atualizar o ano automaticamente (que você já tinha)
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // --- NOVO: Lógica do Menu Inteligente (Smart Header) ---
+    let ultimoScroll = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+      // Pega a posição atual da rolagem da página
+      let atualScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Se a rolagem atual for MAIOR que a última (rolando para baixo) e já passou do topo...
+      if (atualScroll > ultimoScroll && atualScroll > 50) {
+        header.classList.add('esconder-menu'); // Esconde o cabeçalho
+      } else {
+        header.classList.remove('esconder-menu'); // Mostra o cabeçalho
+      }
+      
+      // Atualiza a posição para o próximo movimento (com trava para o 'efeito elástico' do celular)
+      ultimoScroll = atualScroll <= 0 ? 0 : atualScroll; 
+    });
   </script>
 </body>
 </html>

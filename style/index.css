@@ -1,0 +1,228 @@
+
+
+/* ==========================================================================
+   5. Seção Hero (Destaque Principal)
+   ========================================================================== */
+.hero {
+  padding: var(--s4) 0 var(--s3);
+}
+
+.hero h1 {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.9rem, 3.3vw, 3rem); 
+  line-height: 1.15;
+}
+
+.hero p {
+  margin: 0.25rem 0 1.2rem;
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+/* ==========================================================================
+   6. Cartões Comuns (Sobre Mim, Reflexões)
+   ========================================================================== */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  box-shadow: var(--sh);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Um pouco mais largo para os neons */
+  gap: var(--s4); /* Mais respiro entre os cartões brilhantes */
+  padding-top: 20px;
+}
+
+/* ==========================================================================
+   7. Cartões de Projeto: Efeito Neon "Glassmorphism"
+   ========================================================================== */
+.projects .neon-card {
+  position: relative;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.projects .neon-card::before,
+.projects .neon-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  transition: 0.5s;
+}
+
+.projects .neon-card::after {
+  filter: blur(30px);
+}
+
+.projects .neon-card:hover:before,
+.projects .neon-card:hover:after {
+  transform: skewX(0deg);
+  left: 20px;
+  width: calc(100% - 40px);
+}
+
+/* Cores Neon para cada cartão (4 projetos totais) */
+.projects .neon-card:nth-child(1):before,
+.projects .neon-card:nth-child(1):after { background: linear-gradient(315deg, #ffbc00, #ff0058); }
+
+.projects .neon-card:nth-child(2):before,
+.projects .neon-card:nth-child(2):after { background: linear-gradient(315deg, #03a9f4, #ff0058); }
+
+.projects .neon-card:nth-child(3):before,
+.projects .neon-card:nth-child(3):after { background: linear-gradient(315deg, #4dff03, #00d0ff); }
+
+.projects .neon-card:nth-child(4):before,
+.projects .neon-card:nth-child(4):after { background: linear-gradient(315deg, #8a2be2, #ff1493); } /* Roxo para Rosa */
+
+/* Quadrados Flutuantes */
+.projects .neon-card span {
+  display: block;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.projects .neon-card span::before,
+.projects .neon-card span::after {
+  content: '';
+  position: absolute;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.5s;
+  animation: floatAnim 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.projects .neon-card span::before {
+  top: 0; left: 0; width: 0; height: 0;
+}
+
+.projects .neon-card:hover span::before {
+  top: -50px; left: 20px; width: 100px; height: 100px; opacity: 1;
+}
+
+.projects .neon-card span::after {
+  bottom: 0; right: 0; width: 100%; height: 100%;
+  animation-delay: -1s;
+}
+
+.projects .neon-card:hover span:after {
+  bottom: -50px; right: 20px; width: 100px; height: 100px; opacity: 1;
+}
+
+@keyframes floatAnim {
+  0%, 100% { transform: translateY(10px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Conteúdo interno do cartão (Vidro Fosco) */
+.projects .neon-card .pbody {
+  position: relative;
+  left: 0;
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0.05); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1;
+  transition: 0.5s;
+  color: var(--text); 
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+.projects .neon-card:hover .pbody {
+  left: -15px; 
+  padding: 40px 30px;
+}
+
+/* ==========================================================================
+   8. Botões e Acessibilidade (Adaptados para o Tema Escuro)
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borda esbranquiçada translúcida */
+  background: rgba(255, 255, 255, 0.1); /* Fundo levemente claro */
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   9. Media Queries (Responsividade para Celulares)
+   ========================================================================== */
+@media (max-width: 720px) {
+  /* 1. Altera o cabeçalho para empilhar a Logo e o Menu verticalmente */
+  .bar {
+    flex-direction: column; 
+    align-items: center;    
+    padding: 15px 0 10px;   /* Ajuste fino do respiro superior e inferior */
+    gap: 12px;              /* Espaço entre a Logo e os links */
+  }
+
+  /* 2. Centraliza os links do menu e diminui o espaço entre eles */
+  nav ul {
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  /* 3. Reduz a fonte e o "botão" da animação para caber em telas estreitas */
+  nav a {
+    padding: 6px 10px;
+    font-size: 0.75rem;     /* Letra um pouquinho menor */
+  }
+
+  /* 4. Mantém a grade principal em uma única coluna */
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* 5. Reduz os espaçamentos gerais das seções */
+  .pad {
+    padding: var(--s2);
+  }
+
+  .hero {
+    padding: var(--s3) 0 var(--s2);
+  }
+
+  /* 6. Mantém a correção do efeito neon no celular */
+  .projects .neon-card:hover .pbody {
+    left: 0;
+    padding: 30px 20px;
+  }
+}
