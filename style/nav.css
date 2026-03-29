@@ -1,0 +1,139 @@
+/* ==========================================================================
+   4. Cabeçalho e Navegação (MISTURA: Barrinha Ativa + Quadrado Hover)
+   ========================================================================== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(18, 16, 22, 0.85); 
+  backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid var(--border);
+  transition: transform 0.3s ease-in-out; 
+}
+
+/* Joga o menu 100% do tamanho dele para cima, escondendo-o da tela */
+.esconder-menu {
+  transform: translateY(-100%);
+}
+
+.bar {
+  display: flex;
+  gap: var(--s2);
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* --- NOVO EFEITO MISTO NAV --- */
+nav a {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  overflow: hidden; /* Essencial para conter o efeito de vidro */
+}
+
+/* Cor Padrão (Inativa/Outras Páginas) */
+nav a { color: var(--muted); }
+
+/* --- A. Página ATIVA (conforme image_0.png) --- */
+/* Cor do texto branco puro para a página atual */
+nav a.active { color: #fff; }
+
+/* Child Marker (Barrinha Violeta) - Configuração base */
+nav .marker {
+  position: absolute;
+  bottom: 0px; /* Alinhado ao rodapé do link */
+  left: 10%;  /* Centralizado */
+  width: 80%;
+  height: 3px;
+  background-color: var(--ring); /* Usa a cor roxa violeta do seu tema */
+  border-radius: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: scaleX(0); /* Escondido por padrão */
+  opacity: 0;
+  z-index: 1; /* Fica visivelmente por baixo do texto, mas acima do fundo roxo */
+}
+
+/* Exibe a barrinha Violeta quando a página é ATIVA */
+nav a.active .marker {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+
+/* --- B. HOVER em QUALQUER Link (conforme CSS anterior) --- */
+/* Cor do texto branco puro no hover */
+nav a:hover {
+  color: #fff;
+}
+
+/* Reativa a barrinha Violeta no hover, mesmo se não for a página ativa */
+nav a:hover .marker {
+  transform: scaleX(1);
+  opacity: 0;
+}
+
+/* Pseudo-elemento ::before: Bordas do Quadrado Hover */
+nav a:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid var(--accent); /* Roxo Néon */
+  border-bottom: 2px solid var(--accent);
+  transform: scaleY(2); /* Começa grande e diminui no hover */
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: -1; /* Fica atrás do texto */
+}
+
+/* Pseudo-elemento ::after: Fundo preenchido do Quadrado Hover (Vidro) */
+nav a:hover::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 4px); /* Espaço entre bordas */
+  background-color: var(--accent);
+  transform: scale(0); /* Começa escondido e cresce no hover */
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: -2; /* Fica atrás de tudo */
+}
+
+/* Ativa as animações de bordas e fill no hover */
+nav a:hover::before,
+nav a:hover::after {
+  transform: scaleY(1); /* Traz borders de volta */
+  opacity: 1; /* Faz borders aparecerem */
+}
+
+nav a:hover::after {
+  transform: scale(1); /* Traz fill de volta */
+}

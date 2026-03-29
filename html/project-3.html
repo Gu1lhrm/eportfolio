@@ -3,87 +3,132 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Project Title Three · ePortfolio</title>
-  <style>
-    :root{--bg:#fbfafc;--card:#fff;--text:#1b1b1f;--muted:#5d5a66;--border:#e6e3ee;--accent:#5b34d6;--accent2:#3b23a3;--ring:rgba(91,52,214,.28);--r:14px;--s2:1rem;--s3:1.5rem;--mw:900px;--sh:0 10px 30px rgba(10,10,20,.06);color-scheme:light}
-    *{box-sizing:border-box} body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
-    a{color:inherit} .wrap{max-width:var(--mw);margin:0 auto;padding:0 var(--s2)}
-    header{position:sticky;top:0;z-index:10;background:rgba(251,250,252,.92);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--border)}
-    .bar{display:flex;gap:var(--s2);align-items:center;justify-content:space-between;min-height:64px}
-    .brand{font-weight:700;letter-spacing:.2px;text-decoration:none}
-    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:.25rem;flex-wrap:wrap;justify-content:flex-end}
-    nav a{display:inline-block;text-decoration:none;padding:.45rem .7rem;border-radius:999px;color:var(--muted)}
-    nav a:hover{background:#f1eefb;color:var(--text)}
-    main{padding:var(--s3) 0}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--sh)}
-    .pad{padding:var(--s3)}
-    .ph{position:relative;display:grid;place-items:center;color:#6a63a0;border:1px dashed #bfb6e6;border-radius:var(--r);background:linear-gradient(135deg,#f3efff,#fff);overflow:hidden}
-    .ph::after{content:attr(data-label);position:absolute;inset:0;display:grid;place-items:center;font-weight:600;letter-spacing:.2px}
-    .ph img{width:100%;height:100%;object-fit:cover;display:block}
-    h1{margin:0 0 .25rem;font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.2}
-    h2{margin:0 0 .6rem;font-size:1.1rem}
-    .muted{color:var(--muted);margin:.25rem 0 0}
-    .grid{display:grid;gap:var(--s2)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:.55rem .85rem;border-radius:10px;border:1px solid rgba(91,52,214,.35);background:rgba(91,52,214,.08);color:var(--accent2);text-decoration:none;font-weight:600}
-    .btn:hover{background:rgba(91,52,214,.12)}
-    footer{border-top:1px solid var(--border);padding:var(--s3) 0;color:var(--muted)}
-    :focus-visible{outline:3px solid var(--ring);outline-offset:3px}
-  </style>
+  <title>ePortfolio · Academic ePortfolio</title>
+  <link rel="stylesheet" href="../style/index.css">
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="../style/nav.css">
 </head>
 <body>
   <header>
     <div class="wrap bar">
-      <a class="brand" href="index.html" aria-label="Back to ePortfolio home">Your Name</a>
+      <a class="brand" href="index.html#home" aria-label="Go to Home">Guilherme Mendes</a>
       <nav aria-label="Primary">
         <ul>
-          <li><a href="index.html#projects">Projects</a></li>
-          <li><a href="index.html#reflections">Reflections</a></li>
+          <li><a href="../html/index.html">Home<span class="marker"></span></a></li>
+          <li><a href="../html/project-1.html">SEO Project<span class="marker"></span></a></li>
+          <li><a href="../html/project-2.html">Fast Fix<span class="marker"></span></a></li>
+          <li><a href="#" class="active" aria-current="page">ePortfolio<span class="marker"></span></a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
-    <div class="card pad grid">
-      <header>
-        <h1>Project Title Three</h1>
-        <p class="muted">One-sentence summary of the project’s goal and the primary outcome.</p>
-      </header>
-
-      <div class="ph" style="height:240px" data-label="Project Banner / Screenshot">
-        <img alt="Project screenshot placeholder" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" />
+    <section class="hero" aria-labelledby="seo-project-title">
+      <div class="hero-title-row">
+        <h1 id="seo-project-title">
+          ePortfolio
+        </h1>
+        <p>
+          Análise e recomendações de otimização para motores de busca, alinhadas à comunicação centrada no utilizador do WRIT 2201.
+        </p>
       </div>
+      <hr>
+    </section>
 
-      <section aria-labelledby="overview">
-        <h2 id="overview">Overview</h2>
-        <p class="muted">What problem did you solve? What was the context (course, assignment, constraints)? What does the artifact demonstrate?</p>
-      </section>
+    <section class="section" aria-labelledby="explicacao-title">
+      <div class="card pad">
+        <p class="lede">
+          The ePortfolio project is the final project for the WRIT2201: Professional Writing course, where I must present the work I've done during the semester (definition, steps, personal contributions), reflections, and how I can apply it to future work. The development process involves taking information from past work, reflecting on what was done, developing the website, and presenting all the points mentioned previously in a clean, organized, and intuitive way.
+        </p>
+        <p class="lede">
+          I start by taking information from previous personal progress reports to familiarize myself with what was done, what I learned during the process, and how I can apply what I learned to future work. With this, I created a draft with the general information that will be presented in my ePortfolio. With the information already organized, I started developing the website using the HTML and CSS programming languages ​​through the Visual Studio Code IDE. With the website completed, I improved my general information using peer feedback and incorporated it into the final website.
+        </p>
+      </div>
+    </section>
 
-      <section aria-labelledby="stack">
-        <h2 id="stack">Tools & Technologies</h2>
-        <p class="muted">List key tools (e.g., HTML/CSS/JS, Python, SQL, Git) and why you chose them.</p>
-      </section>
+    <section class="section" aria-labelledby="imagens-title">
+      <h2 id="imagens-title">Imagens do projeto</h2>
+      <div class="grid2">
+        <div class="card pad">
+          <img alt="Captura ou resultado de pesquisa relacionado ao projeto SEO" src="../images/seo-project-1.png" />
+        </div>
+        <div class="card pad">
+          <img alt="Segunda imagem do artefacto ou relatório" src="../images/seo-project-2.png" />
+        </div>
+        <div class="card pad">
+          <img alt="Terceira imagem (ex.: métricas ou página otimizada)" src="../images/seo-project-3.png" />
+        </div>
+        <div class="card pad">
+          <img alt="Quarta imagem (ex.: extra ou anexo)" src="../images/seo-project-4.png" />
+        </div>
+      </div>
+    </section>
 
-      <section aria-labelledby="artifact">
-        <h2 id="artifact">Artifact Link</h2>
-        <p class="muted">Replace the link below with your hosted artifact (GitHub, PDF, demo, etc.).</p>
-        <p><a class="btn" href="#" aria-label="Open project artifact (replace #)">Open Artifact</a></p>
-      </section>
+    <section class="section" aria-labelledby="contrib-title">
+      <div class="stack">
+        <div class="card pad">
+          <h2 id="contrib-title">
+            My contributions
+          </h2>
+          <p class="lede">
+            In this project, I was responsible for writing, designing, organizing, and developing the entire ePortfolio. I started by writing the content of the ePortfolio, which involved taking information from previous progress reports and organizing it in a way that would be clear and engaging for readers. After writing the content, I focused on designing the layout and visual elements of the ePortfolio to ensure that it was visually appealing and easy to navigate. Finally, I developed the website using HTML and CSS, implementing the design and ensuring that all elements were functional and responsive across different devices.
+          </p>
+        </div>
 
-      <section aria-labelledby="reflection">
-        <h2 id="reflection">Reflection</h2>
-        <p class="muted">What did you learn? What trade-offs did you make? What would you improve next iteration?</p>
-      </section>
+        <div class="card pad">
+          <h2 id="reflexoes-title">
+            Reflections
+          </h2>
+          <p class="lede">
+            I believe the most important thing to take away from this project is the opportunity to look at past projects and have the ability to objectively analyze what was done, what I learned, how I can improve for the future, and how I can apply these learnings to future projects - both in the academic and professional world. Since I decided to program the ePortfolio from scratch using HTML and CSS on the final website, my prior knowledge of these languages ​​contributed greatly to the success of my project. At the same time, it was what helped me the most, and it was also the thing I found most interesting about the process. It had been years since I had done a project using these languages, and it was a good refresher of this knowledge. Strengths I learned about myself were my ability to work with deadlines and stick to a plan.
+          </p>
+        </div>
 
-      <p><a class="btn" href="index.html#projects" aria-label="Back to projects list">Back to Projects</a></p>
-    </div>
+        <div class="card pad">
+          <h2 id="aplicacao-title">
+            Application
+          </h2>
+          <p class="lede">
+            O processo de desenvolvimento deste site me ensinou maneiras de apresentar informações técnicas mais complexas - como explicar o que é o Fast Fix guid - de uma forma que seja acessível para pessoas que não têm o conhecimento prévio do projeto, como pessoas que não fizeram o curso ou possíveis empregadores. 
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="wrap">
-      <small>© <span id="y">2026</span> Your Name · Contact: your.email@example.com</small>
+      <small>© <span id="y">2026</span> Guilherme Mendes · Contact: guialmeidamendes@gmail.com | gmendes@my.yorku.ca</small>
     </div>
   </footer>
-  <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    // Código para atualizar o ano automaticamente (que você já tinha)
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // --- NOVO: Lógica do Menu Inteligente (Smart Header) ---
+    let ultimoScroll = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+      // Pega a posição atual da rolagem da página
+      let atualScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Se a rolagem atual for MAIOR que a última (rolando para baixo) e já passou do topo...
+      if (atualScroll > ultimoScroll && atualScroll > 50) {
+        header.classList.add('esconder-menu'); // Esconde o cabeçalho
+      } else {
+        header.classList.remove('esconder-menu'); // Mostra o cabeçalho
+      }
+      
+      // Atualiza a posição para o próximo movimento (com trava para o 'efeito elástico' do celular)
+      ultimoScroll = atualScroll <= 0 ? 0 : atualScroll; 
+    });
+  </script>
 </body>
 </html>

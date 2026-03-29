@@ -3,87 +3,139 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Project Title Two · ePortfolio</title>
-  <style>
-    :root{--bg:#fbfafc;--card:#fff;--text:#1b1b1f;--muted:#5d5a66;--border:#e6e3ee;--accent:#5b34d6;--accent2:#3b23a3;--ring:rgba(91,52,214,.28);--r:14px;--s2:1rem;--s3:1.5rem;--mw:900px;--sh:0 10px 30px rgba(10,10,20,.06);color-scheme:light}
-    *{box-sizing:border-box} body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
-    a{color:inherit} .wrap{max-width:var(--mw);margin:0 auto;padding:0 var(--s2)}
-    header{position:sticky;top:0;z-index:10;background:rgba(251,250,252,.92);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--border)}
-    .bar{display:flex;gap:var(--s2);align-items:center;justify-content:space-between;min-height:64px}
-    .brand{font-weight:700;letter-spacing:.2px;text-decoration:none}
-    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:.25rem;flex-wrap:wrap;justify-content:flex-end}
-    nav a{display:inline-block;text-decoration:none;padding:.45rem .7rem;border-radius:999px;color:var(--muted)}
-    nav a:hover{background:#f1eefb;color:var(--text)}
-    main{padding:var(--s3) 0}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--sh)}
-    .pad{padding:var(--s3)}
-    .ph{position:relative;display:grid;place-items:center;color:#6a63a0;border:1px dashed #bfb6e6;border-radius:var(--r);background:linear-gradient(135deg,#f3efff,#fff);overflow:hidden}
-    .ph::after{content:attr(data-label);position:absolute;inset:0;display:grid;place-items:center;font-weight:600;letter-spacing:.2px}
-    .ph img{width:100%;height:100%;object-fit:cover;display:block}
-    h1{margin:0 0 .25rem;font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.2}
-    h2{margin:0 0 .6rem;font-size:1.1rem}
-    .muted{color:var(--muted);margin:.25rem 0 0}
-    .grid{display:grid;gap:var(--s2)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:.55rem .85rem;border-radius:10px;border:1px solid rgba(91,52,214,.35);background:rgba(91,52,214,.08);color:var(--accent2);text-decoration:none;font-weight:600}
-    .btn:hover{background:rgba(91,52,214,.12)}
-    footer{border-top:1px solid var(--border);padding:var(--s3) 0;color:var(--muted)}
-    :focus-visible{outline:3px solid var(--ring);outline-offset:3px}
-  </style>
+  <title>Fast Fix · Academic ePortfolio</title>
+  <link rel="stylesheet" href="../style/index.css">
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="../style/nav.css">
+
 </head>
 <body>
   <header>
     <div class="wrap bar">
-      <a class="brand" href="index.html" aria-label="Back to ePortfolio home">Your Name</a>
+      <a class="brand" href="index.html#home" aria-label="Go to Home">Guilherme Mendes</a>
       <nav aria-label="Primary">
         <ul>
-          <li><a href="index.html#projects">Projects</a></li>
-          <li><a href="index.html#reflections">Reflections</a></li>
+          <li><a href="../html/index.html">Home<span class="marker"></span></a></li>
+          <li><a href="../html/project-1.html">SEO Project<span class="marker"></span></a></li>
+          <li><a href="#" class="active" aria-current="page">Fast Fix<span class="marker"></span></a></li>
+          <li><a href="../html/project-3.html">ePortfolio<span class="marker"></span></a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
-    <div class="card pad grid">
-      <header>
-        <h1>Project Title Two</h1>
-        <p class="muted">One-sentence summary of the project’s goal and the primary outcome.</p>
-      </header>
-
-      <div class="ph" style="height:240px" data-label="Project Banner / Screenshot">
-        <img alt="Project screenshot placeholder" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" />
+    <section class="hero" aria-labelledby="seo-project-title">
+      <div class="hero-title-row">
+        <h1 id="seo-project-title">
+          Fast Fix
+        </h1>
+        <a class="btn" href="https://www.ifixit.com/Guide/How+To+Replace+The+Battery+In+The+Asus+ROG+GA502DU+Laptop/209190" target="_blank" rel="noopener noreferrer" aria-label="Abrir o artefacto do projeto noutro site (abre num novo separador)">
+          Click HERE to see the project
+        </a>
+        <p>
+          Análise e recomendações de otimização para motores de busca, alinhadas à comunicação centrada no utilizador do WRIT 2201.
+        </p>
       </div>
+      <hr>
+    </section>
 
-      <section aria-labelledby="overview">
-        <h2 id="overview">Overview</h2>
-        <p class="muted">What problem did you solve? What was the context (course, assignment, constraints)? What does the artifact demonstrate?</p>
-      </section>
+    <section class="section" aria-labelledby="explicacao-title">
+      <div class="card pad">
+        <p class="lede">
+          The main goal of the project was to assist users in replacing the internal battery of an Asus ROG GA502DU laptop and post it on the iFixit website. My project provided a step-by-step guide with detailed images and clear instructions on how to conduct the process. The information is presented in such a way that people with little to no experience opening and repairing their laptops can complete it.
+        </p>
+        <p class="lede">
+          In general, the project presented 8 steps. Each step contains instructions on how to proceed, accompanied by images visually demonstrating what the user should see at each step. We began by alerting users that the computer must be disconnected from its power source (unplugged and turned off), and then turned the computer upside down. Next, we instructed the user to remove the screws on the bottom of the computer and, using a wedger (or any plastic pry tool), carefully remove the bottom cover. With the computer open, we explain how to remove the cable connecting the battery to the motherboard and its latch, and then we point out the screws that hold the battery in place. With the screws removed and the cable disconnected, the battery can finally be removed, making room for the new one. Finally, we point out that if you follow the steps in reverse, the computer will be reassembled.
+        </p>
+      </div>
+    </section>
 
-      <section aria-labelledby="stack">
-        <h2 id="stack">Tools & Technologies</h2>
-        <p class="muted">List key tools (e.g., HTML/CSS/JS, Python, SQL, Git) and why you chose them.</p>
-      </section>
+    <section class="section" aria-labelledby="imagens-title">
+      <h2 id="imagens-title">Imagens do projeto</h2>
+      <div class="grid2">
+        <div class="card pad">
+          <img alt="Captura ou resultado de pesquisa relacionado ao projeto SEO" src="../images/seo-project-1.png" />
+        </div>
+        <div class="card pad">
+          <img alt="Segunda imagem do artefacto ou relatório" src="../images/seo-project-2.png" />
+        </div>
+        <div class="card pad">
+          <img alt="Terceira imagem (ex.: métricas ou página otimizada)" src="../images/seo-project-3.png" />
+        </div>
+        <div class="card pad">
+          <img alt="Quarta imagem (ex.: extra ou anexo)" src="../images/seo-project-4.png" />
+        </div>
+      </div>
+    </section>
 
-      <section aria-labelledby="artifact">
-        <h2 id="artifact">Artifact Link</h2>
-        <p class="muted">Replace the link below with your hosted artifact (GitHub, PDF, demo, etc.).</p>
-        <p><a class="btn" href="#" aria-label="Open project artifact (replace #)">Open Artifact</a></p>
-      </section>
+    <section class="section" aria-labelledby="contrib-title">
+      <div class="stack">
+        <div class="card pad">
+          <h2 id="contrib-title">
+            My contributions
+          </h2>
+          <p class="lede">
+            During the project's development, the workload was divided equally among each person in the group according to their access. For example, since the computer used during the guide was mine, I was responsible for disassembling it and noting the steps I was taking – taking photos and writing them down step by step. I was also responsible for informing my partner of my progress and, with their help in selecting the photos, uploading them to the iFixit platform.
+          </p>
+          <p class="lede">
+            Over the weeks, I was also responsible for developing early drafts of the instructions, while my partner focused on improving my presentation and communicating directly with the iFixit team. When we received feedback (from both peers and the iFixit team), we worked together to understand what needed to be modified to improve our project and divided the tasks equally. For example, while my partner made visual improvements to the instructions, I redid the process, taking new photos, following the feedback suggestions. 
+          </p>
+        </div>
 
-      <section aria-labelledby="reflection">
-        <h2 id="reflection">Reflection</h2>
-        <p class="muted">What did you learn? What trade-offs did you make? What would you improve next iteration?</p>
-      </section>
+        <div class="card pad">
+          <h2 id="reflexoes-title">
+            Reflections
+          </h2>
+          <p class="lede">
+            This project helped me understand the importance of maintaining clear language when giving instructions, enabling me to communicate with people who don't have an IT background. Furthermore, since we worked in pairs, this project helped me improve my collaboration and communication skills, teaching me that expressing myself objectively is essential for fluid communication and project success. In addition, through constant feedback from various people (peers and the iFixit team), I learned not to take criticism personally and to use it constructively to improve my product. All of this applies not only to university projects but also to various careers where I will have to interact with people from different backgrounds and communication styles.
+          </p>
+        </div>
 
-      <p><a class="btn" href="index.html#projects" aria-label="Back to projects list">Back to Projects</a></p>
-    </div>
+        <div class="card pad">
+          <h2 id="aplicacao-title">
+            Application
+          </h2>
+          <p class="lede">
+            Thinking about the professional perspective, I realize that what I learned during this process can be directly applied to various areas of professional collaboration and communication. Since I had to create a guide for people from diverse backgrounds, I had to learn to communicate technical information using clear and objective language so that non-technical people could understand what was being presented and follow the guide. Like the other project, I improved my communication skills with my partner, my colleagues, and the iFixit writing team. With the first two, I had to provide feedback so that their work could be improved, teaching me that I should use motivating language while presenting areas for improvement objectively. Regarding the feedback received, I learned that it refers to the projects that were done, not to me personally, which helped me to receive criticism professionally and improve the documents based on it. For my future career, I will keep in mind what I learned so that I can succeed both individually and in group projects, demonstrating quality and professionalism.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="wrap">
-      <small>© <span id="y">2026</span> Your Name · Contact: your.email@example.com</small>
+      <small>© <span id="y">2026</span> Guilherme Mendes · Contact: guialmeidamendes@gmail.com | gmendes@my.yorku.ca</small>
     </div>
   </footer>
-  <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    // Código para atualizar o ano automaticamente (que você já tinha)
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // --- NOVO: Lógica do Menu Inteligente (Smart Header) ---
+    let ultimoScroll = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+      // Pega a posição atual da rolagem da página
+      let atualScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Se a rolagem atual for MAIOR que a última (rolando para baixo) e já passou do topo...
+      if (atualScroll > ultimoScroll && atualScroll > 50) {
+        header.classList.add('esconder-menu'); // Esconde o cabeçalho
+      } else {
+        header.classList.remove('esconder-menu'); // Mostra o cabeçalho
+      }
+      
+      // Atualiza a posição para o próximo movimento (com trava para o 'efeito elástico' do celular)
+      ultimoScroll = atualScroll <= 0 ? 0 : atualScroll; 
+    });
+  </script>
 </body>
 </html>

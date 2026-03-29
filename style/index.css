@@ -13,6 +13,22 @@
   line-height: 1.15;
 }
 
+/* Título + botão na mesma linha (páginas de projeto) */
+.hero-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s2);
+  margin-bottom: 0.4rem;
+}
+
+.hero-title-row h1 {
+  margin: 0;
+  flex: 1 1 auto;
+  min-width: min(100%, 10ch);
+}
+
 .hero p {
   margin: 0.25rem 0 1.2rem;
   color: var(--muted);
@@ -20,8 +36,16 @@
 }
 
 /* ==========================================================================
-   6. Cartões Comuns (Sobre Mim, Reflexões)
+   6. Cartões Comuns (Sobre Mim, Reflexões, personal images, etc.)
    ========================================================================== */
+img {
+  width: 100%;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -33,7 +57,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Um pouco mais largo para os neons */
   gap: var(--s4); /* Mais respiro entre os cartões brilhantes */
-  padding-top: 20px;
 }
 
 /* ==========================================================================
@@ -76,17 +99,9 @@
 }
 
 /* Cores Neon para cada cartão (4 projetos totais) */
-.projects .neon-card:nth-child(1):before,
-.projects .neon-card:nth-child(1):after { background: linear-gradient(315deg, #ffbc00, #ff0058); }
+.projects .neon-card:nth-child(n):before,
+.projects .neon-card:nth-child(n):after { background: linear-gradient(315deg, #4c00ff, #4c00ff00); }
 
-.projects .neon-card:nth-child(2):before,
-.projects .neon-card:nth-child(2):after { background: linear-gradient(315deg, #03a9f4, #ff0058); }
-
-.projects .neon-card:nth-child(3):before,
-.projects .neon-card:nth-child(3):after { background: linear-gradient(315deg, #4dff03, #00d0ff); }
-
-.projects .neon-card:nth-child(4):before,
-.projects .neon-card:nth-child(4):after { background: linear-gradient(315deg, #8a2be2, #ff1493); } /* Roxo para Rosa */
 
 /* Quadrados Flutuantes */
 .projects .neon-card span {
@@ -174,7 +189,30 @@
 }
 
 .btn:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.068);
+}
+
+/* Hero da página de projeto */
+.hero-title-row .btn {
+  margin-bottom: 10px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: var(--text);
+  padding: 0.65rem 1rem;
+  min-height: 10px;
+  transition: 0.5s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-title-row .btn:hover {
+  background: var(--card);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: var(--sh), 0 0 24px rgba(76, 0, 255, 0.35);
 }
 
 :focus-visible {
@@ -218,6 +256,22 @@
 
   .hero {
     padding: var(--s3) 0 var(--s2);
+  }
+
+  /* Hero do projeto: empilha título + botão como uma coluna de cartão */
+  .hero-title-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--s2);
+  }
+
+  .hero-title-row h1 {
+    min-width: 0;
+  }
+
+  .hero-title-row .btn {
+    width: 100%;
+    justify-content: center;
   }
 
   /* 6. Mantém a correção do efeito neon no celular */

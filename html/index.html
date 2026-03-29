@@ -6,17 +6,18 @@
   <title>Academic ePortfolio</title>
   <link rel="stylesheet" href="../style/index.css">
   <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="../style/nav.css">
 </head>
 <body>
   <header>
     <div class="wrap bar">
-      <a class="brand" href="#home" aria-label="Go to Home">Your Name</a>
+      <a class="brand" href="#home" aria-label="Go to Home">Guilherme Mendes</a>
       <nav aria-label="Primary">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#projects">Technical Projects</a></li>
-          <li><a href="#reflections">Course Reflections</a></li>
+          <li><a href="#home" class="active" aria-current="page">Home<span class="marker"></span></a></li>
+          <li><a href="../html/project-1.html">SEO Project<span class="marker"></span></a></li>
+          <li><a href="../html/project-2.html">Fast Fix<span class="marker"></span></a></li>
+          <li><a href="../html/project-3.html">ePortfolio<span class="marker"></span></a></li>
         </ul>
       </nav>
     </div>
@@ -24,24 +25,21 @@
 
   <main class="wrap">
     <section id="home" class="hero" aria-labelledby="home-title">
-      <h1 id="home-title">Welcome to My Academic ePortfolio</h1>
-      <p>HERE IS THE PLACE TO PUT THE PURPOSE OF THE PORTFOLIO</p>
-      <div class="banner ph" data-label="Banner Image Placeholder">
-        <img alt="Banner image placeholder" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" />
-      </div>
+      <h1 id="home-title">WRIT 2201 ePortfolio</h1>
+      <p>Here is the place to put the purpose of the portfolio.</p>
+      <hr>
     </section>
 
     <section id="about" class="section" aria-labelledby="about-title">
       <div class="grid2">
         <div class="card pad">
-          <div class="avatar ph" data-label="Profile Photo">
-            <img alt="Profile photo placeholder" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" />
+          <div id="profile-photo" class="avatar ph" data-label="Profile Photo">
+            <img alt="Profile photo placeholder" src="../images/personal photo.jpeg" />
           </div>
         </div>
         <div class="card pad">
           <h2 id="about-title">About Me</h2>
-          <p class="lede">Write a concise bio here: your program, interests, strengths, and the kinds of problems you like to solve.</p>
-          <p class="lede mt">Include a brief academic focus, relevant tools/skills, and a sentence on what you’re seeking next (internship, research, entry-level role).</p>
+          <p class="lede">My name is Guilherme Mendes, and I am an IT student, currently working on my undergrad at York University in Toronto. I am Brazilian and have been living in Canada since university started. I have always enjoyed technology and how much it helps us in various areas of life. I am particularly interested in automation, artificial intelligence, and video games. My main goal at the moment is to evolve both technically and academically, seeking to solve real-world problems through technology. I am currently working for a company back in Brazil that sells to other companies solutions based on technologies, which allows me to improve my technical and people skills. </p>
         </div>
       </div>
     </section>
@@ -53,7 +51,7 @@
         <article class="card neon-card" role="listitem">
           <span></span>
           <div class="pbody">
-            <h3 class="ptitle">Project Title One</h3>
+            <h3 class="ptitle">SEO Project</h3>
             <p class="pdesc">Brief description of the project, your role, and the core outcome or lesson learned.</p>
             <a class="btn" href="project-1.html" aria-label="View details for Project Title One">View Artifact</a>
           </div>
@@ -62,7 +60,7 @@
         <article class="card neon-card" role="listitem">
           <span></span>
           <div class="pbody">
-            <h3 class="ptitle">Project Title Two</h3>
+            <h3 class="ptitle">Fast Fix</h3>
             <p class="pdesc">Brief description of the project, your role, and the core outcome or lesson learned.</p>
             <a class="btn" href="project-2.html" aria-label="View details for Project Title Two">View Artifact</a>
           </div>
@@ -71,7 +69,7 @@
         <article class="card neon-card" role="listitem">
           <span></span>
           <div class="pbody">
-            <h3 class="ptitle">Project Title Three</h3>
+            <h3 class="ptitle">ePortfolio</h3>
             <p class="pdesc">Brief description of the project, your role, and the core outcome or lesson learned.</p>
             <a class="btn" href="project-3.html" aria-label="View details for Project Title Three">View Artifact</a>
           </div>
@@ -83,15 +81,14 @@
     <section id="reflections" class="section" aria-labelledby="reflections-title">
       <h2 id="reflections-title">Course Reflections</h2>
       <div class="card pad textBox">
-        <p class="lede">Use this space for critical reflection: what you learned, how your thinking changed, evidence from artifacts, and what you would improve next time.</p>
-        <p class="lede mt">Consider addressing challenges, feedback you received, ethical or professional considerations, and how this course supports your goals.</p>
+        <p class="lede">At the beginning of the course, my knowledge of writing, research, and communication was more geared towards the academic or informal world (friends and family) rather than user-centered communication. Because of this, one of my biggest challenges was developing the "Fast Fix" guide, where I had to present technical information to users without a technical background. To create a page ideal for the experience of a typical iFixit user, I had to change my use of words like "detach" or "remove" to more detailed, step-by-step descriptions accompanied by detailed images of the current step. This taught me that effective writing is not just about conveying information about a subject, but about making sure people from different backgrounds understand what I'm trying to communicate. Furthermore, I learned to work with peer feedback more easily, allowing me to focus on and improve aspects of my projects that are still unclear to users and enhancing my ability to provide feedback and work in a group. This knowledge will help me work on creating internal manuals and projects that require direct communication with the client.</p>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="wrap">
-      <small>© <span id="y">2026</span> Your Name · Contact: your.email@example.com</small>
+      <small>© <span id="y">2026</span> Guilherme Mendes · Contact: guialmeidamendes@gmail.com | gmendes@my.yorku.ca</small>
     </div>
   </footer>
 
