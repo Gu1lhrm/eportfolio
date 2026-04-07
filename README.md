@@ -1,0 +1,1 @@
+This is an ePortfolio for AP/WRIT 2201 M - Effective Writing and Research in ITEC taken at York University during winter term 2025/2026. It presents the projects done, reflections and applications on future works.
