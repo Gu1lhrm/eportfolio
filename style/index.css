@@ -280,3 +280,111 @@ img {
     padding: 30px 20px;
   }
 }
+
+/* ==========================================================================
+   Estilos da Galeria de Capturas de Tela (Lado a Lado)
+   ========================================================================== */
+.screenshot-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divide o espaço perfeitamente em duas metades */
+  gap: var(--s4); /* Um espaço um pouco maior para não colar as imagens grandes */
+  align-items: start; /* Mantém as imagens alinhadas pelo topo caso tenham alturas diferentes */
+}
+
+.screenshot-gallery img {
+  margin: 0;
+  width: 100%;
+  
+  /* NOVAS REGRAS DE PADRONIZAÇÃO */
+  aspect-ratio: 4 / 3; /* Define uma proporção fixa e igual para todas (pode mudar para 16/9 se preferir mais retangular) */
+  object-fit: cover; /* Preenche todo o espaço definido acima sem distorcer, cortando apenas as bordas se necessário */
+  object-position: top; /* Garante que o corte foque na parte de cima do documento/site capturado */
+  
+  /* Filtros e transições que já tínhamos (mantenha) */
+  filter: brightness(0.85) contrast(1.05); 
+  border: 1px solid rgba(255, 255, 255, 0.15); 
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+}
+
+.screenshot-gallery img:hover {
+  filter: brightness(1) contrast(1);
+  transform: translateY(-5px) scale(1.02); /* Efeito de destaque ao passar o mouse */
+  box-shadow: 0 15px 35px rgba(76, 0, 255, 0.2); 
+}
+
+/* ==========================================================================
+   Efeito Lightbox (Zoom na Imagem com clique fora para fechar)
+   ========================================================================== */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75); /* Fundo escuro translúcido */
+  backdrop-filter: blur(8px); /* Efeito de vidro fosco */
+  -webkit-backdrop-filter: blur(8px); /* Suporte essencial para Safari/macOS */
+  
+  /* Centraliza a imagem na tela */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  z-index: 9999; /* Garante que fica por cima de tudo no site */
+  
+  /* Escondido por padrão com transição suave */
+  opacity: 0;
+  pointer-events: none; 
+  transition: opacity 0.3s ease;
+  cursor: zoom-out; /* Mostra a lupa com o sinal de menos para fechar */
+}
+
+/* Classe adicionada via JavaScript quando a imagem é clicada */
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto; 
+}
+
+/* Estilo da imagem expandida */
+.lightbox img {
+  /* NOVAS REGRAS DE PADRONIZAÇÃO DE TELA CHEIA */
+  width: 100%;
+  height: 100%;
+  max-width: 90vw; /* Ocupa no máximo 90% da largura da tela */
+  max-height: 90vh; /* Ocupa no máximo 90% da altura da tela */
+  object-fit: contain; /* Garante que a imagem inteira caiba na tela sem CORTAR e sem ESTICAR */
+  
+  /* Estilos visuais que já tínhamos */
+  border-radius: var(--r);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.lightbox.active img {
+  transform: scale(1);
+}
+
+/* Cria uma grade simétrica onde ambos os lados têm a mesma altura e largura */
+.equal-split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Divide a largura em 50% para cada lado rigorosamente */
+  align-items: stretch; /* Força ambas as colunas a terem a altura do elemento mais alto */
+  gap: var(--s3); /* Espaçamento entre o texto e a imagem */
+}
+
+/* Garante que a imagem preenche a sua caixa a 100% sem distorcer */
+.equal-split-layout img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* A imagem atua como um fundo de ecrã para a sua caixa */
+  border-radius: var(--r);
+}
+
+/* 📱 Responsividade: Empilha as imagens em telas menores (celulares/tablets) */
+@media (max-width: 800px) {
+  .screenshot-gallery {
+    grid-template-columns: 1fr; /* Volta para coluna única no celular */
+    gap: var(--s3);
+  }
+}

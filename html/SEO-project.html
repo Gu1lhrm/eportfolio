@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SEO Project · Academic ePortfolio</title>
+  <link rel="stylesheet" href="../style/index.css">
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="../style/nav.css">
+</head>
+<body>
+  <header>
+    <div class="wrap bar">
+      <a class="brand" href="index.html#home" aria-label="Go to Home">Guilherme Mendes</a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="../index.html">Home<span class="marker"></span></a></li>
+          <li><a href="#" class="active" aria-current="page">SEO Project<span class="marker"></span></a></li>
+          <li><a href="../html/FasFix.html">Fast Fix<span class="marker"></span></a></li>
+          <li><a href="../html/ePortfolio.html">ePortfolio<span class="marker"></span></a></li>
+          <li><a href="../index.html#reflections">Course Reflections<span class="marker"></span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" aria-labelledby="seo-project-title">
+      <div class="hero-title-row">
+        <h1 id="seo-project-title">SEO Project</h1>
+        <a class="btn" href="https://www.ifixit.com/Device/Asus_N551J" target="_blank" rel="noopener noreferrer" aria-label="Abrir o artefacto do projeto noutro site (abre num novo separador)">Click HERE to see the project</a>
+      </div>
+      <hr>
+    </section>
+
+    <section class="section" aria-labelledby="explicacao-title">
+      <div class="card pad">
+        <img alt="Main page in iFixitfor the SEO project" src="../images/asus_repair_mainpage.jpeg" /> <br>
+        <p class="lede">The goal of our work was to improve the Asus N551J page so that users have easier access to reliable and relevant information regarding problems with this model. This project presents technical information, identification details, and some repair resources that may be useful for troubleshooting and repairing this specific model, posted on the iFixit website.</p>
+        <p class="lede">
+          The main steps: <ol>
+            <li>Research about the computer</li>
+            <li>Organize information from reliable sources (Asus manual)</li>
+            <li>Work on various documents until we arrive at the desired information and formatting so that the user has the best experience when visiting our page.</li>
+          </ol>
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="contrib-title">
+      <div class="stack">
+        <div class="card pad">
+          <h2 id="contrib-title">My contributions</h2>
+          <p class="lede">
+            Throughout the process, my partner and I divided the work well, always discussing to decide what would be fairest for both sides. During the weeks, I focused mainly on the background and product identification section and simultaneously helped my partner with anything he needed (for example, communication with iFixIt).
+          
+          <p class="lede">
+            The background consists of general information about the computer, ranging from the launch price to the sound quality of the device, focusing on being informative without using marketing language. The user can then use the information in this section to compare it with their own computer. I then presented more specific details on how to identify it in the next section. In the device identification section, I included a step-by-step guide on how to identify the computer, helping the user find the sticker that has the model, and confirming that the document meets their needs. To ensure that all of this is as complete as possible, I used SEO strategies, conducted keyword research, and consulted multiple sources to find reliable information. Furthermore, I used writing skills - learned in the WRIT 2201 course - to turn technical information into informative and easy-to-understand.
+          </p>
+          
+          <p class="lede">
+            Furthermore, I actively participated in planning discussions with my partner and directly helped divide the work so that responsibilities were fairly distributed. Throughout the process, I maintained clear and constant communication with my colleague through the digital platform we agreed upon at the beginning of the project (Discord), always monitoring progress and, in case of problems, presenting solutions as soon as possible. For each weekly step, I provided feedback and submitted my part always on time, thus helping to ensure smooth coordination throughout all stages. Maintaining this open and collaborative approach toward communication, we were able to stay organized and complete each part on time to the best of our abilities.
+          </p>
+
+          <section class="section" aria-labelledby="imagens-title">
+            <div class="screenshot-gallery">
+              <img 
+                alt="Captura ou resultado de pesquisa" 
+                src="../images/background_infor.jpeg" 
+                onclick="openLightbox(this.src)" 
+                style="cursor: zoom-in;" 
+              />
+              <img 
+                alt="Segunda imagem do artefacto" 
+                src="../images/devide_identification.jpeg" 
+                onclick="openLightbox(this.src)" 
+                style="cursor: zoom-in;" 
+              />
+            </div>
+          </section>
+
+          <div id="lightbox-overlay" class="lightbox" onclick="closeLightbox()">
+            <img id="lightbox-img" src="" alt="Imagem Ampliada" />
+          </div>
+    </section>
+
+    <div class="card pad" style="margin-bottom: 1.5rem;">
+          <h2 id="reflexoes-title">Reflections & Applications</h2>
+          <p class="lede">
+            Knowing what I know now, I would start the planning process earlier, creating a more detailed schedule system containing intermediate checkpoints. In addition, I would encourage more frequent peer reviews, creating more space for updates to be incorporated gradually, instead of receiving them at the final stages.
+          </p>
+          <p class="lede">
+            I also learned how to transform technical information into accessible and informative texts, and they require several versions and different points of view to be of good quality. With that, I can say that the workflow was effective, but having a more structured delivery structure could have helped with last-minute pressure, which would allow us more time to help the work using feedback as a basis.
+          </p>
+          <p class="lede">
+            Thinking professionally, I can see that what I learned can be directly translated to workplace collaboration. I also learned that working on my part while simultaneously supporting my partners – providing support and constructive feedback – puts us on a path to achieving positive results and maintaining a constructive working environment. For my future career, I will keep in mind what I learned so that I can succeed both individually and in group projects, demonstrating quality and professionalism.
+          </p>
+        </div>
+      </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <small>© <span id="y">2026</span> Guilherme Mendes · Contact: guialmeidamendes@gmail.com | gmendes@my.yorku.ca</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    // Código para atualizar o ano automaticamente (que você já tinha)
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // --- NOVO: Lógica do Menu Inteligente (Smart Header) ---
+    let ultimoScroll = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+      // Pega a posição atual da rolagem da página
+      let atualScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Se a rolagem atual for MAIOR que a última (rolando para baixo) e já passou do topo...
+      if (atualScroll > ultimoScroll && atualScroll > 50) {
+        header.classList.add('esconder-menu'); // Esconde o cabeçalho
+      } else {
+        header.classList.remove('esconder-menu'); // Mostra o cabeçalho
+      }
+      
+      // Atualiza a posição para o próximo movimento (com trava para o 'efeito elástico' do celular)
+      ultimoScroll = atualScroll <= 0 ? 0 : atualScroll; 
+    });
+
+    // Função para abrir o Lightbox
+    function openLightbox(imageSrc) {
+      const overlay = document.getElementById('lightbox-overlay');
+      const lightboxImg = document.getElementById('lightbox-img');
+      
+      lightboxImg.src = imageSrc; // Copia a fonte da imagem clicada para a imagem grande
+      overlay.classList.add('active'); // Mostra a camada escura
+    }
+
+    // Função para fechar o Lightbox
+    function closeLightbox() {
+      const overlay = document.getElementById('lightbox-overlay');
+      overlay.classList.remove('active'); // Esconde a camada escura
+    }
+  </script>
+</body>
+</html>
